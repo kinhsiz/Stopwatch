@@ -1,8 +1,8 @@
 /*variables; :root can be useful for declaring global 
 CSS variables:*/
 :root {
-    --main-color: #ffa600;
-    --main-white: white;
+    --main-color: #000000;
+    --main-green: #7FFF00;
 }
 
 body {
@@ -13,10 +13,15 @@ body {
 
 .wrapper {
     width: 50%;
-    margin: 0 auto;
-    color: var(--main-white);
-    background-color: blue;
+    color: var(--main-green);
     text-align: center;
+    /*center vertical and horizontally*/
+    margin: 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 h1, h2 {
@@ -32,23 +37,24 @@ p {
     margin-bottom: 30px;
 }
 
-
-
 button {
     border-radius: 10px;
     font-size: 2em;
     text-decoration: none;
+    color: var(--main-green);
+    background-color: #000000;
     outline: none;
     margin: 10px;
     width: 200px;
     height: 60px;
     padding: 5px 0;
-    border: 1px solid black;
+    border: 1px solid var(--main-green);
     cursor: pointer;
 }
 
 button:hover {
-    background-color: pink;
-    border: 1px solid pink;
+    background-color:var(--main-green);
+    border: 1px solid var(--main-green);
+    color:var(--main-color);
     transition: all ease-in-out 0.5s;
 }
